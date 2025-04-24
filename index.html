@@ -1,0 +1,536 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AGROTINS - 25 anos</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="main.js"></script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito+Sans:ital,opsz,wght@0,6..12,200..1000;1,6..12,200..1000&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <nav class="navbar">
+            <div class="logo">
+                <!-- Use your actual logo -->
+                <img src="images/LOGO.png" alt="Logo AGROTINS">
+            </div>
+            <div class="nav-links">
+                <a href="#">Página Inicial</a>
+                <a href="#">Programação</a>
+                <a href="#">Expositores e Patrocinadores</a>
+                <a href="#">Notícias</a>
+                <a href="#">Galeria</a>
+            </div>
+            <a href="#" class="contact-btn">Contato</a>
+        </nav>
+    </header>
+    <div class="bg-all">
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="hero-content">
+            <div class="stripe-box">
+            <div class="hero-text">
+                <img src="/images/AGROEVOLUTION.png" alt="AGROTINS 25 anos">
+                <img src="/images/ANOS25.png" alt="AGROTINS 25 anos">
+            </div>
+        </div>
+            <div class="hero-logo">
+                 <!-- Use your actual 25 year logo -->
+                <img src="/images/SELOAGROTINS.png" alt="AGROTINS 25 anos">
+            </div>
+        
+    </section>
+
+    <!-- Mission Section -->
+    <section class="mission">
+        <p>A AGROTINS TEM COMO OBJETIVO PROMOVER O DESENVOLVIMENTO DO SETOR AGROPECUÁRIO, DESTACANDO AS POTENCIALIDADES DO AGRONEGÓCIO, ASSIM COMO APOIAR E DIVULGAR AS AÇÕES DE PESQUISA, ADAPTAÇÃO, VALIDAÇÃO, DIVULGAÇÃO E TRANSFERÊNCIA DE TECNOLOGIAS PARA O SETOR PRODUTIVO.</p>
+    </section>
+
+    <!-- Countdown Section -->
+    <section class="countdown">
+        <div class="countdown-container">
+            <div class="countdown-title">
+                A AGROTINS<br>COMEÇA EM
+            </div>
+            <div class="countdown-boxes-container">
+                <div class="countdown-boxes">
+                    <div class="countdown-box">
+                        31
+                        <div class="countdown-label">Dias</div>
+                    </div>
+                    <div class="countdown-box">
+                        16
+                        <div class="countdown-label">Horas</div>
+                    </div>
+                    <div class="countdown-box">
+                        20
+                        <div class="countdown-label">Min</div> <!-- Changed to Min -->
+                    </div>
+                    <div class="countdown-box">
+                        50
+                        <div class="countdown-label">Seg</div> <!-- Changed to Seg -->
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Section -->
+    <section class="schedule">
+        <div class="container">
+             <h2 class="section-title">
+                PROGRAMAÇÃO
+                <div class="nav-arrows">
+                    <!-- Add JS event listeners to these -->
+                    <span class="nav-btn prev-btn btn-blue">«</span>
+                    <span class="nav-btn next-btn btn-blue">»</span>
+                </div>
+            </h2>
+            <div class="schedule-container">
+                <div class="schedule-content">
+                    <!-- Day 1 (Example - Add others similarly) -->
+                    <div class="schedule-day active" data-day="1">
+                        <h3>DIA 13/05</h3>
+                        <div class="schedule-item">
+                             <div class="schedule-icon">[<i class="far fa-clock"></i>]</div> <!-- Placeholder for Clock Icon -->
+                            <div class="schedule-time">08:00 - 08:30</div>
+                            <div class="schedule-info">Abertura</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-icon">[<i class="far fa-clock"></i>]</div>
+                            <div class="schedule-time">08:30 - 09:30</div>
+                            <div class="schedule-info">Apresentação cultural</div>
+                        </div>
+                        <div class="schedule-item">
+                            <div class="schedule-icon">[<i class="far fa-clock"></i>]</div>
+                            <div class="schedule-time">09:30 - 10:30</div>
+                            <div class="schedule-info">Palestra - O segredo do campo
+                               <span>[Auditório Jatapú]</span> <!-- Location example -->
+                            </div>
+                        </div>
+                        <div class="schedule-item">
+                             <div class="schedule-icon">[<i class="far fa-clock"></i>]</div>
+                            <div class="schedule-time">10:30 - 11:00</div>
+                             <div class="schedule-info">Workshop - Sucesso no agro
+                                <span>[Auditório Sebrae]</span>
+                            </div>
+                        </div>
+                         <!-- Add other items for Day 1 -->
+                    </div>
+
+                    <!-- Day 2 (Hidden by default) -->
+                    <div class="schedule-day" data-day="2">
+                         <h3>DIA 14/05</h3>
+                         <div class="schedule-item">... Day 2 Item 1 ...</div>
+                         <div class="schedule-item">... Day 2 Item 2 ...</div>
+                    </div>
+                     <!-- Add Day 3 etc. -->
+
+                </div>
+                <div class="schedule-image">
+                    <!-- Placeholder for the collage image -->
+                    <img src="/images/MAPA.png" alt="Agrotins Programação Visual">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+    <!-- Exhibitors Section -->
+    <section class="section bg-dark-blue exhibitors">
+        <div class="container">
+            <h2 class="section-title" style="color:#28a745; margin-bottom: 30px;">EXPOSITORES E PATROCINADORES</h2>
+            <div class="exhibitors-container">
+                <div class="exhibitors-left">
+                    <div class="participar-box">
+                        <h3>COMO PARTICIPAR</h3>
+                        <p>Podem participar da Agrotins 2025 empresas do setor agropecuário, instituições de pesquisa e ensino, órgãos públicos, cooperativas, produtores rurais e prestadores de serviços relacionados ao agronegócio. Para garantir um espaço no evento, os interessados devem seguir os prazos e requisitos estabelecidos no edital de chamamento público disponível no site da Tocantins Parcerias, responsável pela comercialização dos espaços.</p>
+                    </div>
+                </div>
+                <div class="exhibitors-right">
+                    <h3>LISTA DE EMPRESAS E INSTITUIÇÕES CONFIRMADAS</h3>
+                    <ul class="exhibitor-list">
+                        LISTA DE EMPRESAS E INSTITUIÇÕES CONFIRMADAS
+                        <!-- Adicione mais empresas aqui -->
+                    </ul>
+                    <h3>MAPA INTERATIVO</h3>
+                    <div class="exhibitors-map-desc">VEJA ONDE ESTÁ LOCALIZADO CADA EXPOSITOR</div>
+                    <div class="exhibitors-map">
+                        <img src="/images/mapa-interativo.png" alt="Mapa de Expositores">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Sponsors Section -->
+    <section class="section bg-dark-blue sponsors" style="padding-top: 30px;"> <!-- Reduced top padding -->
+        <div class="container">
+             <h2 class="section-title" style="color:#28a745;">PATROCINADORES
+                 <div class="nav-arrows sponsors-nav-arrow">
+                     <span class="arrow-nav">&raquo;</span> <!-- Simple arrow, make functional with JS -->
+                 </div>
+             </h2>
+            <div class="sponsors-carousel">
+                <div class="sponsors-logos">
+                    <!-- Add Sponsor Logos -->
+                    <div class="sponsor-logo">
+                        <img src="/images/sebrae-seeklogo 1.png" alt="SEBRAE">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="/images/nike-seeklogo 1.png" alt="Nike">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="/images/stanley-seeklogo 1.png" alt="Stanley">
+                    </div>
+                     <div class="sponsor-logo">
+                        <img src="/images/Mitsubishi-Logo-1970-present 1.png" alt="Patrocinador 4">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="/images/sebrae-seeklogo 1.png" alt="SEBRAE">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="/images/nike-seeklogo 1.png" alt="Nike">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="/images/stanley-seeklogo 1.png" alt="Stanley">
+                    </div>
+                     <div class="sponsor-logo">
+                        <img src="/images/Mitsubishi-Logo-1970-present 1.png" alt="Patrocinador 4">
+                    </div>                    <div class="sponsor-logo">
+                        <img src="/images/sebrae-seeklogo 1.png" alt="SEBRAE">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="/images/nike-seeklogo 1.png" alt="Nike">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="/images/stanley-seeklogo 1.png" alt="Stanley">
+                    </div>
+                     <div class="sponsor-logo">
+                        <img src="/images/Mitsubishi-Logo-1970-present 1.png" alt="Patrocinador 4">
+                    </div>
+                    <!-- Duplicate logos if using CSS animation for infinite loop -->
+                     <div class="sponsor-logo">
+                        <img src="https://via.placeholder.com/120x50/EFEFEF/000000?text=SEBRAE" alt="SEBRAE">
+                    </div>
+                    <div class="sponsor-logo">
+                        <img src="https://via.placeholder.com/120x50/EFEFEF/000000?text=NIKE" alt="Nike">
+                    </div>
+                     <div class="sponsor-logo">
+                        <img src="https://via.placeholder.com/120x50/EFEFEF/000000?text=STANLEY" alt="Stanley">
+                    </div>
+                     <div class="sponsor-logo">
+                        <img src="https://via.placeholder.com/120x50/EFEFEF/000000?text=Sponsor+4" alt="Patrocinador 4">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+     <!-- News Section -->
+    <section class="section bg-dark-blue news">
+        <div class="container">
+            <h2 class="section-title">NOTÍCIAS DA AGROTINS</h2>
+            <div class="news-container">
+                <!-- Featured News Item -->
+                <div class="news-featured">
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/400x250/CCCCCC/000000?text=Featured+News" alt="Notícia Destaque">
+                        <div class="news-content">
+                            <span class="category">GERAL</span>
+                            <h3>Governo do Tocantins publica regulamento que define critérios de participação e normas para expositores na Agrotins 25 anos</h3>
+                            <span class="date">Publicado em: 27/03/2024 16:07</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- News List -->
+                <div class="news-list">
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/120x80/CCCCCC/000000?text=News+1" alt="Notícia 1">
+                        <div class="news-content">
+                            <span class="category">AGROTINS</span>
+                            <h3>Governador Wanderlei Barbosa lança oficialmente edição comemorativa de 25 anos da Agrotins com 1.200 expositores e público esperado de 200 mil pessoas</h3>
+                        </div>
+                    </div>
+                    <div class="news-item">
+                        <img src="https://via.placeholder.com/120x80/CCCCCC/000000?text=News+2" alt="Notícia 2">
+                        <div class="news-content">
+                             <span class="category">AGROTINS</span>
+                             <h3>Governador Wanderlei Barbosa lança oficialmente edição comemorativa de 25 anos da Agrotins com 1.200 expositores e público esperado de 200 mil pessoas</h3>
+                        </div>
+                    </div>
+                     <div class="news-item">
+                        <img src="https://via.placeholder.com/120x80/CCCCCC/000000?text=News+3" alt="Notícia 3">
+                        <div class="news-content">
+                             <span class="category">AGROTINS</span>
+                             <h3>Governador Wanderlei Barbosa lança oficialmente edição comemorativa de 25 anos da Agrotins com 1.200 expositores e público esperado de 200 mil pessoas</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="section-more-link">
+                <a href="#">MAIS NOTÍCIAS <span class="arrow-nav">&raquo;</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Photos Section -->
+    <section class="section bg-dark-blue photos">
+        <div class="container">
+             <h2 class="section-title">FOTOS
+                 <div class="nav-arrows photos-nav-arrow">
+                    <!-- Link integrated into the "VER MAIS" link below -->
+                 </div>
+             </h2>
+            <p class="subtitle">VEJA O QUE JÁ PASSOU PELA AGROTINS 2025</p>
+
+            <div class="photo-display-container">
+                <!-- Larger Featured Photos -->
+                <div class="photo-featured-row">
+                    <div class="photo-item photo-item-large">
+                        <!-- Example image matching the layout -->
+                        <img src="https://via.placeholder.com/600x350/77aa77/ffffff?text=Large+Photo+1+(Agro+Event)" alt="Foto Destaque 1">
+                    </div>
+                    <div class="photo-item photo-item-large">
+                         <!-- Example image matching the layout -->
+                        <img src="https://via.placeholder.com/600x350/deb887/ffffff?text=Large+Photo+2+(Field)" alt="Foto Destaque 2">
+                    </div>
+                </div>
+
+                <!-- Smaller Thumbnail Row -->
+                <div class="photo-thumbnails-row">
+                     <div class="photo-item photo-item-small"><img src="https://via.placeholder.com/200x120/f0e68c/000000?text=Thumb+1" alt="Foto 1"></div>
+                     <div class="photo-item photo-item-small"><img src="https://via.placeholder.com/200x120/add8e6/000000?text=Thumb+2" alt="Foto 2"></div>
+                     <div class="photo-item photo-item-small"><img src="https://via.placeholder.com/200x120/90ee90/000000?text=Thumb+3" alt="Foto 3"></div>
+                     <div class="photo-item photo-item-small"><img src="https://via.placeholder.com/200x120/ffa07a/000000?text=Thumb+4" alt="Foto 4"></div>
+                     <div class="photo-item photo-item-small"><img src="https://via.placeholder.com/200x120/c0c0c0/000000?text=Thumb+5" alt="Foto 5"></div>
+                     <div class="photo-item photo-item-small"><img src="https://via.placeholder.com/200x120/dda0dd/000000?text=Thumb+6" alt="Foto 6"></div>
+                     <div class="photo-item photo-item-small"><img src="https://via.placeholder.com/200x120/87cefa/000000?text=Thumb+7" alt="Foto 7"></div>
+                     <!-- Add more small photos as needed -->
+                </div>
+            </div>
+
+            <div class="section-more-link">
+                <a href="#">VER GALERIA <span class="arrow-nav">»</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Videos Section -->
+    <section class="section bg-dark-blue videos">
+        <div class="container">
+             <h2 class="section-title">VÍDEOS
+                 <div class="nav-arrows video-nav-arrow">
+                    <!-- Using external buttons now -->
+                 </div>
+             </h2>
+             <p class="subtitle">CONFIRA O QUE JÁ ROLOU NA AGROTINS 2025</p>
+
+            <div class="video-carousel-wrapper">
+                <button class="video-nav-btn prev-video" aria-label="Previous Video">«</button>
+                <div class="video-carousel-container">
+                    <div class="video-carousel-track">
+                        <!-- Add Video Items (Example: 3 visible) -->
+                        <div class="video-item">
+                            <img src="https://via.placeholder.com/400x225/333/fff?text=Video+Thumb+1" alt="Vídeo 1">
+                            <div class="play-overlay">▶</div>
+                             <span class="video-duration">0:31</span>
+                        </div>
+                         <div class="video-item">
+                            <img src="https://via.placeholder.com/400x225/444/fff?text=Video+Thumb+2" alt="Vídeo 2">
+                            <div class="play-overlay">▶</div>
+                             <span class="video-duration">4:27</span>
+                        </div>
+                         <div class="video-item">
+                            <img src="https://via.placeholder.com/400x225/555/fff?text=Video+Thumb+3" alt="Vídeo 3">
+                            <div class="play-overlay">▶</div>
+                             <span class="video-duration">2:15</span>
+                        </div>
+                         <div class="video-item">
+                            <img src="https://via.placeholder.com/400x225/666/fff?text=Video+Thumb+4" alt="Vídeo 4">
+                            <div class="play-overlay">▶</div>
+                             <span class="video-duration">1:50</span>
+                        </div>
+                         <div class="video-item">
+                            <img src="https://via.placeholder.com/400x225/777/fff?text=Video+Thumb+5" alt="Vídeo 5">
+                            <div class="play-overlay">▶</div>
+                             <span class="video-duration">3:05</span>
+                        </div>
+                        <!-- Add more video items -->
+                    </div>
+                </div>
+                <button class="video-nav-btn next-video" aria-label="Next Video">»</button>
+            </div>
+
+             <div class="section-more-link">
+                <a href="#">VER MAIS VÍDEOS <span class="arrow-nav">»</span></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="section bg-yellow testimonials">
+        <div class="container">
+            <h2 class="section-title">DEPOIMENTOS
+                <div class="nav-arrows">
+                    <span class="arrow-nav">»</span> <!-- Make functional with JS if needed -->
+                 </div>
+            </h2>
+            <div class="testimonials-grid">
+                <!-- Testimonial 1 -->
+                <div class="testimonial">
+                    <span class="quote-open">“</span>
+                    <p>“É o 24º ano que a gente está presente. Sempre tem uma expectativa de o movimento aumentar e não é diferente. Esse ano a feira está bem maior, muito mais expositores, tem um fluxo bem grande. Então, no momento, a gente tem um colume considerável de vendas como outras datas, de natal. A Agrotins sempre é um momento que a gente espera para ter um volume considerável de picapes</p>
+                     <div class="stars">★★★★★</div>
+                    <div class="author">
+                        <span class="author-name">Jefté Elísier</span>
+                        <span class="author-title">Gerente de vendas</span>
+                    </div>
+                    <span class="quote-close">”</span>
+                </div>
+                <!-- Testimonial 2 -->
+                 <div class="testimonial">
+                    <span class="quote-open">“</span>
+                    <p>“É o 24º ano que a gente está presente. Sempre tem uma expectativa de o movimento aumentar e não é diferente. Esse ano a feira está bem maior, muito mais expositores, tem um fluxo bem grande. Então, no momento, a gente tem um colume considerável de vendas como outras datas, de natal. A Agrotins sempre é um momento que a gente espera para ter um volume considerável de picapes</p>
+                     <div class="stars">★★★★★</div>
+                    <div class="author">
+                        <span class="author-name">Jefté Elísier</span> 
+                        <span class="author-title">Gerente de vendas</span>
+                    </div>
+                     <span class="quote-close">”</span>
+                </div>
+                 <!-- Add more testimonials if using JS carousel -->
+            </div>
+            <!-- Pagination removed as per image -->
+            <!-- <div class="testimonial-pagination"> ... </div> -->
+        </div>
+    </section>
+     <!-- Services Section -->
+    <section class="section bg-dark-blue services">
+        <div class="container">
+             <h2 class="section-title">SERVIÇOS</h2>
+            <div class="services-container">
+                <div class="services-map-area">
+                    <h3>MAPA DA FEIRA</h3>
+                     <!-- Placeholder for the Map -->
+                    <img src="https://via.placeholder.com/400x500/CCCCCC/000000?text=Mapa+da+Feira" alt="Mapa da Feira">
+                    <p>Informações sobre protocolos de segurança e regras do evento.</p>
+                </div>
+                <div class="services-list-area">
+                    <div class="service-item">
+                         <div class="service-icon">[<i class="fas fa-hotel"></i>]</div> <!-- Placeholder Hotel Icon -->
+                        <div class="service-details">
+                            <h3>HOSPEDAGEM</h3>
+                            <p>VEJA A LISTA DE HOTÉIS PARCEIROS DA AGROTINS</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                         <div class="service-icon">[<i class="fas fa-utensils"></i>]</div> <!-- Placeholder Restaurant Icon -->
+                        <div class="service-details">
+                            <h3>RESTAURANTES</h3>
+                            <p>VEJA A LISTA DE RESTAURANTES PARCEIROS DA AGROTINS</p>
+                        </div>
+                    </div>
+                    <div class="service-item">
+                         <div class="service-icon">[<i class="fas fa-car"></i>]</div> <!-- Placeholder Transport Icon -->
+                        <div class="service-details">
+                            <h3>TRANSPORTE</h3>
+                            <p>CONFIRA OS TRANSPORTES DISPONÍVEIS PARA CHEGAR NA AGROTINS</p>
+                        </div>
+                    </div>
+                    <!-- Add more services if needed -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="footer-container">
+            <div class="footer-logo">
+                 <!-- Placeholder for Realização Logo -->
+                <img src="https://via.placeholder.com/150x50/AAAAAA/666666?text=Realização+TOCANTINS" alt="Realização Tocantins">
+            </div>
+            <div class="footer-links">
+                <a href="#">Página Inicial</a>
+                <a href="#">Programação</a>
+                <a href="#">Contato</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            &copy; 2025 Agrotins - Todos os direitos reservados <!-- Updated Year -->
+        </div>
+    </footer>
+
+    <script>
+        // Schedule carousel navigation (Basic Example)
+        document.addEventListener('DOMContentLoaded', function() {
+            const scheduleDays = document.querySelectorAll('.schedule-day');
+            const prevBtn = document.querySelector('.schedule .prev-btn');
+            const nextBtn = document.querySelector('.schedule .next-btn');
+            let currentDayIndex = 0;
+
+            if (scheduleDays.length > 0 && prevBtn && nextBtn) { // Check if elements exist
+                // Function to update visible schedule day
+                function updateScheduleDay(index) {
+                    // Hide all days
+                    scheduleDays.forEach((day, i) => {
+                        day.classList.toggle('active', i === index);
+                    });
+                    currentDayIndex = index;
+                }
+
+                // Next button click handler
+                nextBtn.addEventListener('click', function() {
+                    let newIndex = (currentDayIndex + 1) % scheduleDays.length;
+                    updateScheduleDay(newIndex);
+                });
+
+                // Previous button click handler
+                prevBtn.addEventListener('click', function() {
+                    let newIndex = (currentDayIndex - 1 + scheduleDays.length) % scheduleDays.length;
+                    updateScheduleDay(newIndex);
+                });
+
+                // Initialize with the first day active (redundant if HTML has .active)
+                 updateScheduleDay(0);
+            }
+
+            // --- Add JS for Testimonial Carousel Here ---
+            // Example: Select dots, add click listeners to change testimonial slides
+             const testimonialDots = document.querySelectorAll('.testimonial-pagination span');
+             const testimonials = document.querySelectorAll('.testimonial'); // Assuming direct children of grid
+
+             if (testimonialDots.length > 0 && testimonials.length > 0) {
+                 let currentTestimonialIndex = 0;
+
+                 function updateTestimonials(index) {
+                     // This example just updates dots, actual slide change needed
+                     testimonialDots.forEach((dot, i) => {
+                          dot.classList.toggle('active', i === index);
+                     });
+                     // Add logic here to show/hide/translate testimonial elements
+                     console.log("Show testimonial index:", index);
+                     currentTestimonialIndex = index;
+                 }
+
+                 testimonialDots.forEach((dot, index) => {
+                     dot.addEventListener('click', () => {
+                         updateTestimonials(index);
+                     });
+                 });
+                  // Initial state
+                 updateTestimonials(0);
+             }
+
+             // --- Add JS for Sponsor Carousel Arrows Here (if not using CSS animation) ---
+
+        });
+    </script>
+     <!-- Font Awesome CDN (Optional, for icons) -->
+     <!-- <script src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/js/all.min.js"></script> -->
+</body>
+</html>
