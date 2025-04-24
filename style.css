@@ -305,7 +305,7 @@ header {
  .section-title .nav-arrows span,
  .section-more-link .arrow-nav { /* Style for >> arrows */
      font-weight: bold;
-     font-size: 2rem;
+     font-size: 3rem;
      cursor: pointer;
      color: var(--color-primary);
  }
@@ -317,17 +317,36 @@ header {
      border-radius: 50%;
      text-align: center;
      line-height: 36px;
-     font-size: 2rem;
+     font-size: 3rem;
      cursor: pointer;
      text-shadow: 0 2px 5px var(--color-shadow);
      transition: background-color 0.3s;
  }
- .section-title .nav-arrows span.nav-btn:hover {
-     background-color: rgba(254, 201, 10, 0.66);
- }
- .btn-blue {
-    color: #142B5D;
+
+
+/* Custom for nav-btn in top right */
+.section-title .nav-arrows {
+    position: absolute;
+    right: 40px;
+    display: flex;
+    gap: 10px;
+    z-index: 10;
 }
+
+.section-title {
+    position: relative;
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 2rem;
+}
+
+/* Testimonial custom divider */
+.testimonial hr {
+    border: 0;
+    border-top: 1.5px solid #07294d;
+    margin: 10px 0;
+}
+
 /* Schedule Section */
 .schedule {
     padding: 60px 0;
@@ -340,7 +359,9 @@ header {
     padding-right: 40px;
     border-radius: 16px;
 }
-
+span.nav-btn.btn-blue {
+    color: var(--color-bg-dark);
+}
 .schedule .section-title {
      margin-bottom: 30px; /* Less margin */
 }
@@ -407,8 +428,13 @@ header {
 
 .schedule-icon {
     color: var(--color-primary); /* Green icon */
-    font-size: 18px;
-     flex-shrink: 0;
+    width: 30px;
+    height: 30px;
+}
+.schedule-icon img {
+    width: 80%;
+    height: 80%;
+    object-fit: contain;
 }
 
 .schedule-time {
@@ -584,6 +610,34 @@ header {
 .news-container {
     display: flex;
     gap: 30px;
+    margin-top: 30px;
+}
+
+.news-outer {    
+    width: 20%;
+    border: 0;
+    background-color: #0611DF;
+    height: 2px;
+    margin: 8px 0;
+}
+.news-inner {
+    position: relative;
+    width: 90%;
+    left: 10%;
+    border: 0;
+    background-color: var(--color-white);
+    height: 2px;
+    margin: 8px 0;
+}
+.news-outer.last {
+    position: relative;
+    left: 80%;
+    width: 20%;
+}
+.news-inner.last {
+    position: relative;
+    left: 0;
+    width: 90%;
 }
 .news-featured {
     flex: 0 0 35%; /* Width for featured item */
@@ -604,13 +658,12 @@ header {
 .news-list .news-item {
      display: flex;
      gap: 15px;
-     background-color: transparent; /* No background for list items */
+     background-color: var(--color-white);
      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-     padding-bottom: 15px;
+     padding: 15px;
 }
 .news-list .news-item:last-child {
     border-bottom: none;
-    padding-bottom: 0;
 }
 
 
@@ -629,6 +682,11 @@ header {
 
 .news-content {
     padding: 15px;
+    color: var(--color-bg-dark);
+    background-color: var(--color-white);
+}
+.news-content h3 {
+    color: var(--color-bg-dark);
 }
  .news-list .news-content {
      padding: 0;
@@ -636,7 +694,7 @@ header {
 
 .news-item .category {
     display: inline-block;
-    background-color: var(--color-primary);
+    background-color: var(--color-bg-dark);
     color: var(--color-white);
     padding: 2px 8px;
     font-size: 11px;
@@ -650,12 +708,14 @@ header {
     padding: 1px 6px;
     margin-bottom: 5px;
  }
-
+ .news-item{
+    background-color: var(--color-white);
+ }
 .news-item h3 {
     font-size: 18px;
     margin-bottom: 8px;
     line-height: 1.3;
-    color: var(--color-white);
+    color: var(--color-bg-dark);
 }
 .news-list .news-item h3 {
     font-size: 15px;
@@ -678,17 +738,18 @@ header {
 
 
 .section-more-link {
+    
     text-align: right;
     margin-top: 30px;
 }
 .section-more-link a {
-    color: var(--color-primary); /* Green link */
+    color: var(--color-white);
     font-weight: bold;
     text-transform: uppercase;
-    font-size: 14px;
+    font-size: 20px;
     display: inline-flex; /* Align text and arrow */
     align-items: center;
-    gap: 5px;
+    gap: 15px;
 }
 
 /* Photos Section */
@@ -697,6 +758,12 @@ header {
     color: #ccc;
     margin-bottom: 30px; /* More space before grid */
     font-size: 15px;
+}
+.photos .section-title {
+    color: var(--color-yellow);
+    margin-bottom: 20px;
+    font-weight: 800;
+    font-size: 2rem;
 }
 
 .photo-display-container {
@@ -749,10 +816,11 @@ header {
 }
 
 /* --- Videos Section Styling --- */
-.videos .subtitle {
-    color: #ccc;
+.videos .section-title {
+    color: var(--color-primary);
     margin-bottom: 20px;
-    font-size: 15px;
+    font-weight: 800;
+    font-size: 2rem;
 }
 
 .video-carousel-wrapper {
@@ -766,26 +834,67 @@ header {
 }
 
 .video-carousel-track {
-   display: flex;
-   transition: transform 0.5s ease-in-out;
+    display: flex;
+    transition: transform 0.5s cubic-bezier(.4,2,.3,1);
+    align-items: center;
 }
 
 .video-item {
-   flex: 0 0 calc(100% / 3 - 10px); /* Show 3 items, account for margin */
-   margin: 0 5px; /* Small gap between items */
-   position: relative;
-   border-radius: 5px;
-   overflow: hidden;
-   cursor: pointer;
+    flex: 0 0 27%;
+    margin: 0 1.5%;
+    position: relative;
+    border-radius: 12px;
+    overflow: visible;
+    cursor: pointer;
+    box-shadow: none;
+    transition: transform 0.4s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
+    z-index: 1;
+    filter: brightness(0.85) blur(0px);
 }
 
 .video-item img {
    display: block;
+   margin-top: 5.5%;
    width: 100%;
    height: auto;
    aspect-ratio: 16 / 9; /* Maintain aspect ratio */
    object-fit: cover;
 }
+
+.video-item.center {
+    transform: scale(1.18) translateY(-10px);
+    z-index: 2;
+    box-shadow: 0 12px 36px 0 rgba(0,0,0,0.25), 0 2px 8px 0 rgba(40,167,69,0.10);
+    filter: brightness(1) blur(0px);
+}
+.video-item:not(.center) {
+    transform: scale(0.92) translateY(12px);
+    box-shadow: 0 2px 16px 0 rgba(0,0,0,0.10);
+    filter: brightness(0.8) blur(0.5px);
+}
+.video-item img {
+    box-shadow: none;
+    border-radius: 12px;
+    transition: box-shadow 0.3s, transform 0.4s cubic-bezier(.4,2,.3,1);
+}
+
+.video-item.center img {
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.13);
+}
+
+.video-item .play-overlay {
+    z-index: 3;
+}
+/* .video-item.center a img {
+    display: block;
+    width: 125%;
+    transform: scale(1.25);
+    height: auto;
+    aspect-ratio: 16 / 9; 
+    object-fit: cover;
+    margin-top: -12.5%;
+    z-index: 1;
+ } */
 
 .video-item .play-overlay {
    position: absolute;
@@ -793,9 +902,8 @@ header {
    left: 50%;
    transform: translate(-50%, -50%);
    font-size: 50px; /* Adjust size */
-   color: rgba(255, 255, 255, 0.85);
-   background-color: rgba(0, 0, 0, 0.3);
-   border-radius: 50%;
+    background-image: url('/images/video.svg');
+    background-size: contain;
    width: 70px; /* Circle size */
    height: 70px;
    display: flex;
@@ -803,7 +911,7 @@ header {
    justify-content: center;
    line-height: 1;
    text-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
-   opacity: 0; /* Hidden by default */
+   opacity: 1; /* Hidden by default */
    transition: opacity 0.3s ease;
    pointer-events: none; /* Let clicks go through to item */
 }
@@ -867,13 +975,13 @@ header {
 }
 .testimonials-grid {
    display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); /* Responsive grid */
+   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Responsive grid */
    gap: 5rem; /* Space between testimonials */
 }
 .testimonial .quote-open {
-   position: absolute;
+   position: relative;
    top: 10px;
-   left: 15px;
+   left: -15px;
    font-size: 60px; /* Larger quote mark */
    color: var(--color-bg-dark); /* Dark quote */
    opacity: 0.9;
@@ -891,7 +999,7 @@ header {
 }
 
 .testimonial .stars {
-   color: var(--color-bg-dark); /* Dark stars to match border/quotes */
+   color: var(--color-white); /* Dark stars to match border/quotes */
    font-size: 18px; /* Adjust star size */
    margin-bottom: 15px; /* Space before author */
    text-align: left; /* Stars aligned left */
@@ -899,7 +1007,7 @@ header {
 
 .testimonial .author {
    font-weight: normal; /* Remove default bold from author div */
-   text-align: left; /* Author aligned left */
+   text-align: center; /* Author aligned left */
    color: var(--color-bg-dark);
    font-size: 14px;
    margin-top: 10px; /* Reset margin */
@@ -909,7 +1017,7 @@ header {
 .testimonial .author-name {
    display: block; /* Name on its own line */
    font-weight: bold; /* Bold name */
-   font-size: 16px; /* Slightly larger name */
+   font-size: 1.5rem; /* Slightly larger name */
    margin-bottom: 2px;
 }
 

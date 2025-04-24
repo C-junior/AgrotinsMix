@@ -46,4 +46,9 @@
                  }
             });
         }
+            function updateVideoClasses() {
+            document.querySelectorAll('.video-item').forEach((item, idx) => {
+                item.classList.toggle('center', idx === currentVideoIndex + 1); // +1 if 3 shown, center is middle
+            });
+        }
         // --- End Video Carousel Logic ---
