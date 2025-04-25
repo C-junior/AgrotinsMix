@@ -105,6 +105,11 @@ footer {
     padding: 30px 0 10px 0;
     font-size: 13px;
 }
+.divider {
+    height: 2px;
+    background: rgba(255,255,255,0.1);
+    margin: 30px 0;
+}
 .footer-container {
     max-width: 700px;
     margin: 0 auto;
