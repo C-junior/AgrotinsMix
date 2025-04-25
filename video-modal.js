@@ -20,8 +20,21 @@
     const iframeWrapper = modal.querySelector('.video-modal-iframe-wrapper');
 
     function openModal(videoUrl) {
+        // Extract only the video id from the url (YouTube)
+        let embedUrl = videoUrl;
+        if (videoUrl.includes('youtube.com/watch')) {
+            const match = videoUrl.match(/v=([^&]+)/);
+            if (match) {
+                embedUrl = `https://www.youtube.com/embed/${match[1]}?autoplay=1`;
+            }
+        } else if (videoUrl.includes('youtu.be/')) {
+            const match = videoUrl.match(/youtu\.be\/([^?&]+)/);
+            if (match) {
+                embedUrl = `https://www.youtube.com/embed/${match[1]}?autoplay=1`;
+            }
+        }
         modal.classList.add('open');
-        iframeWrapper.innerHTML = `<iframe width="100%" height="400" src="https://www.youtube.com/embed/88bdcYDCVd0?autoplay=1" frameborder="0" allowfullscreen></iframe>`;
+        iframeWrapper.innerHTML = `<iframe width="100%" height="400" src="${embedUrl}" frameborder="0" allowfullscreen></iframe>`;
         document.body.style.overflow = 'hidden';
     }
 
@@ -51,4 +64,5 @@
     attachVideoModalEvents();
     // If carousel changes, you may want to re-attach events
     window.attachVideoModalEvents = attachVideoModalEvents;
+    window.openModal = openModal;
 })();
