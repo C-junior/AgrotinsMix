@@ -826,6 +826,7 @@ span.nav-btn.btn-blue {
 .video-carousel-wrapper {
    position: relative;
    padding: 0 45px; /* Space for external arrows */
+   height: 350px;
 }
 
 .video-carousel-container {
@@ -841,7 +842,9 @@ span.nav-btn.btn-blue {
     display: flex;
     transition: transform 0.5s cubic-bezier(.4,2,.3,1);
     align-items: center;
+    justify-content: center;
     will-change: transform;
+    height: 350px;
 }
 
 .video-item {
@@ -851,11 +854,11 @@ span.nav-btn.btn-blue {
     border-radius: 12px;
     overflow: visible;
     cursor: pointer;
+    gap: 30px;
     box-shadow: none;
     transition: transform 0.4s cubic-bezier(.4,2,.3,1), box-shadow 0.3s;
     z-index: 1;
     filter: brightness(0.85) blur(0px);
-    background: #000;
 }
 
 .video-item img {
@@ -871,7 +874,7 @@ span.nav-btn.btn-blue {
 }
 
 .video-item.center {
-    transform: scale(1.18) translateY(-18px);
+    transform: scale(1.18) ;
     z-index: 3;
     box-shadow: 0 16px 48px 0 rgba(0,0,0,0.28), 0 2px 8px 0 rgba(40,167,69,0.10);
     filter: brightness(1) blur(0px);
