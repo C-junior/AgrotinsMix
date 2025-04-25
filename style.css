@@ -480,7 +480,7 @@ span.nav-btn.btn-blue {
 }
 
 .exhibitors-right {
-    flex: 0 0 70%; /* 70% width */
+    flex: 1; /* Takes remaining space */
     min-width: 0;
 }
 .participar-box {
@@ -1058,6 +1058,11 @@ span.nav-btn.btn-blue {
 }
 .services-list-area {
     flex: 1; /* Takes remaining space */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
 }
 
 .services-map-area h3 {
