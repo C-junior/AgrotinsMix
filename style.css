@@ -1036,13 +1036,14 @@ span.nav-btn.btn-blue {
     flex: 1; /* Takes remaining space */
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: start;
     justify-content: center;
+  
     margin: 0 auto;
 }
 
 .services-map-area h3 {
-    color: var(--color-primary); /* Green title */
+    color: var(--color-white); /* Green title */
     font-size: 16px;
     text-transform: uppercase;
     margin-bottom: 15px;
@@ -1065,10 +1066,9 @@ span.nav-btn.btn-blue {
     gap: 20px;
     padding: 15px 0;
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    width: 100%;
 }
-.service-item:last-child {
-    border-bottom: none;
-}
+
 
 .service-icon {
     font-size: 30px; /* Placeholder size */
@@ -1084,7 +1084,7 @@ span.nav-btn.btn-blue {
     margin-bottom: 5px;
     text-transform: uppercase;
 }
-.service-details p {
+.service-details a {
     font-size: 13px;
     color: #ccc;
 }
