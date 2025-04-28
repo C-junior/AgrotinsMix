@@ -19,7 +19,7 @@
                 <img src="images/LOGO.png" alt="Logo AGROTINS">
             </div>
             <div class="nav-links">
-                <a href="#">Página Inicial</a>
+                <a href="#home">Página Inicial</a>
                 <a href="#schedule">Programação</a>
                 <a href="#exhibitors">Expositores e Patrocinadores</a>
                 <a href="#news">Notícias</a>
@@ -30,7 +30,7 @@
     </header>
     <div class="bg-all">
     <!-- Hero Section -->
-    <section class="hero">
+    <section class="hero" id="home">
         <div class="hero-content">
             <div class="stripe-box">
             <div class="hero-text">
@@ -80,7 +80,7 @@
     </section>
 
     <!-- Schedule Section -->
-    <section class="schedule">
+    <section class="schedule" id="schedule">
         <div class="container">
              <h2 class="section-title">
                 PROGRAMAÇÃO
@@ -163,7 +163,7 @@
     </section>
 </div>
     <!-- Exhibitors Section -->
-    <section class="section bg-dark-blue exhibitors">
+    <section class="section bg-dark-blue exhibitors" id="exhibitors">
         <div class="container">
             <h2 class="section-title" style="color:#28a745; margin-bottom: 30px;">EXPOSITORES E PATROCINADORES</h2>
             <div class="exhibitors-container">
@@ -194,7 +194,7 @@
         <div class="container">
              <h2 class="section-title" style="color:#28a745;">PATROCINADORES
                  <div class="nav-arrows sponsors-nav-arrow">
-                     <span class="arrow-nav">&raquo;</span> <!-- Simple arrow, make functional with JS -->
+                    <a href="/patrocinadores.html"><span class="arrow-nav">&raquo;</span></a>
                  </div>
              </h2>
             <div class="sponsors-carousel">
@@ -235,7 +235,6 @@
                      <div class="sponsor-logo">
                         <img src="/images/Mitsubishi-Logo-1970-present 1.png" alt="Patrocinador 4">
                     </div>
-                    <!-- Duplicate logos if using CSS animation for infinite loop -->
 
                 </div>
             </div>
@@ -243,7 +242,7 @@
     </section>
 
      <!-- News Section -->
-    <section class="section bg-dark-blue news">
+    <section class="section bg-dark-blue news" id="news">
         <div class="container">
             <h2 class="section-title">NOTÍCIAS DA AGROTINS</h2>
             <hr class = "news-outer"> 
@@ -255,7 +254,7 @@
                         <img src="/images/image_6.png" alt="Notícia Destaque">
                         <div class="news-content">
                             <span class="category">GERAL</span>
-                            <h3>Governo do Tocantins publica regulamento que define critérios de participação e normas para expositores na Agrotins 25 anos</h3>
+                            <h3><a href="noticia.html">Governo do Tocantins publica regulamento que define critérios de participação e normas para expositores na Agrotins 25 anos</a></h3>
                             <span class="date">Publicado em: 27/03/2024 16:07</span>
                         </div>
                     </div>
@@ -266,27 +265,27 @@
                         <img src="/images/image_1.png" alt="Notícia 1">
                         <div class="news-content">
                             <span class="category">AGROTINS</span>
-                            <h3>Governador Wanderlei Barbosa lança oficialmente edição comemorativa de 25 anos da Agrotins com 1.200 expositores e público esperado de 200 mil pessoas</h3>
+                            <h3><a href="noticia.html">Governador Wanderlei Barbosa lança oficialmente edição comemorativa de 25 anos da Agrotins com 1.200 expositores e público esperado de 200 mil pessoas</a></h3>
                         </div>
                     </div>
                     <div class="news-item">
                         <img src="/images/image_1.png" alt="Notícia 2">
                         <div class="news-content">
                              <span class="category">AGROTINS</span>
-                             <h3>Governador Wanderlei Barbosa lança oficialmente edição comemorativa de 25 anos da Agrotins com 1.200 expositores e público esperado de 200 mil pessoas</h3>
+                             <h3><a href="noticia.html">Governador Wanderlei Barbosa lança oficialmente edição comemorativa de 25 anos da Agrotins com 1.200 expositores e público esperado de 200 mil pessoas</a></h3>
                         </div>
                     </div>
                      <div class="news-item">
                         <img src="/images/image_1.png" alt="Notícia 3">
                         <div class="news-content">
                              <span class="category">AGROTINS</span>
-                             <h3>Governador Wanderlei Barbosa lança oficialmente edição comemorativa de 25 anos da Agrotins com 1.200 expositores e público esperado de 200 mil pessoas</h3>
+                             <h3><a href="noticia.html">Governador Wanderlei Barbosa lança oficialmente edição comemorativa de 25 anos da Agrotins com 1.200 expositores e público esperado de 200 mil pessoas</a></h3>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="section-more-link">
-                <a href="#">MAIS NOTÍCIAS <span class="arrow-nav">&raquo;</span></a>
+                <a href="#">MAIS NOTÍCIAS <span class="arrow-nav text-white">&raquo;</span></a>
             </div>
 
             <hr class = "news-inner last"> 
@@ -295,7 +294,7 @@
     </section>
 
     <!-- Photos Section -->
-    <section class="section bg-dark-blue photos">
+    <section class="section bg-dark-blue photos" id="gallery">
         <div class="container">
              <h2 class="section-title">FOTOS
                  <div class="nav-arrows photos-nav-arrow">
@@ -344,8 +343,10 @@
              <p class="subtitle">
                  CONFIRA O QUE JÁ ROLOU NA AGROTINS 2025             
                  <div class="section-more-link">
-                    <span class="arrow-nav" id="video-arrow-prev">«</span>
-                    <span class="arrow-nav" id="video-arrow-next">»</span>
+                    <div class="video-nav">
+                        <span class="arrow-nav prev-video" id="video-arrow-prev">«</span>
+                        <span class="arrow-nav next-video" id="video-arrow-next">»</span>
+                    </div>
                  </div>
              </p>
              
@@ -440,27 +441,26 @@
                 </div>
                 <div class="services-list-area">
                     <div class="service-item">
-                         <div class="service-icon"><i class="fas fa-hotel"></i></div> <!-- Placeholder Hotel Icon -->
+                         <div class="service-icon"><i class="fas fa-hotel"></i></div> 
                         <div class="service-details">
                             <h3>HOSPEDAGEM</h3>
                             <a href="/hospedagem.html">VEJA A LISTA DE HOTÉIS PARCEIROS DA AGROTINS</a>
                         </div>
                     </div>
                     <div class="service-item">
-                         <div class="service-icon"><i class="fas fa-utensils"></i></div> <!-- Placeholder Restaurant Icon -->
+                         <div class="service-icon"><i class="fas fa-utensils"></i></div> 
                         <div class="service-details">
                             <h3>RESTAURANTES</h3>
-                            <a href="#">VEJA A LISTA DE RESTAURANTES PARCEIROS DA AGROTINS</a>
+                            <a href="/restaurantes.html">VEJA A LISTA DE RESTAURANTES PARCEIROS DA AGROTINS</a>
                         </div>
                     </div>
                     <div class="service-item">
-                         <div class="service-icon"><i class="fas fa-car"></i></div> <!-- Placeholder Transport Icon -->
+                         <div class="service-icon"><i class="fas fa-car"></i></div>
                         <div class="service-details">
                             <h3>TRANSPORTE</h3>
-                            <a href="#">CONFIRA OS TRANSPORTES DISPONÍVEIS PARA CHEGAR NA AGROTINS</a>
+                            <a href="/transporte.html">CONFIRA OS TRANSPORTES DISPONÍVEIS PARA CHEGAR NA AGROTINS</a>
                         </div>
                     </div>
-                    <!-- Add more services if needed -->
                 </div>
             </div>
         </div>

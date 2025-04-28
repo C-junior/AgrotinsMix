@@ -75,8 +75,8 @@ header {
 
 .nav-links a {
     color: #555; /* Slightly muted color */
-    font-weight: 500;
-    font-size: 14px;
+    font-weight: 800;
+    font-size: 16px;
     padding: 5px 0;
 }
 
@@ -751,6 +751,9 @@ span.nav-btn.btn-blue {
     align-items: center;
     gap: 15px;
 }
+.text-white{
+    color: var(--color-white) !important;
+}
 
 /* Photos Section */
 /* --- Photos Section Styling --- */
@@ -923,45 +926,18 @@ span.nav-btn.btn-blue {
    opacity: 1;
 }
 
-.video-duration {
-   position: absolute;
-   bottom: 8px;
-   right: 8px;
-   background-color: rgba(0, 0, 0, 0.7);
-   color: white;
-   padding: 2px 6px;
-   font-size: 12px;
-   border-radius: 3px;
-}
 
-.video-nav-btn {
-   position: absolute;
-   top: 50%;
-   transform: translateY(-50%);
-   background-color: rgba(0, 0, 0, 0.4);
-   color: white;
-   border: none;
-   border-radius: 50%;
-   width: 40px;
-   height: 40px;
-   font-size: 24px;
-   line-height: 38px;
-   text-align: center;
-   cursor: pointer;
-   z-index: 10;
-   transition: background-color 0.3s;
-}
 
 .video-nav-btn:hover {
    background-color: rgba(0, 0, 0, 0.7);
 }
 
-.video-nav-btn.prev-video {
-   left: 0px;
+.prev-video {
+   margin-right: 10px;
 }
 
-.video-nav-btn.next-video {
-   right: 0px;
+.next-video {
+   margin-left: 10px;
 }
 
 /* --- Testimonials Section Styling Update --- */
