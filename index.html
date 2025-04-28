@@ -58,21 +58,21 @@
             </div>
             <div class="countdown-boxes-container">
                 <div class="countdown-boxes">
-                    <div class="countdown-box">
-                        31
+                    <div class="countdown-box" id="days">
+                        00
                         <div class="countdown-label">Dias</div>
                     </div>
-                    <div class="countdown-box">
-                        16
+                    <div class="countdown-box" id="hours">
+                        00
                         <div class="countdown-label">Horas</div>
                     </div>
-                    <div class="countdown-box">
-                        20
-                        <div class="countdown-label">Min</div> <!-- Changed to Min -->
+                    <div class="countdown-box" id="minutes">
+                        00
+                        <div class="countdown-label">Min</div>
                     </div>
-                    <div class="countdown-box">
-                        50
-                        <div class="countdown-label">Seg</div> <!-- Changed to Seg -->
+                    <div class="countdown-box" id="seconds">
+                        00
+                        <div class="countdown-label">Seg</div>
                     </div>
                 </div>
             </div>
@@ -479,7 +479,7 @@
         <div class="footer-container">
             <div class="footer-logo">
                  <!-- Placeholder for Realização Logo -->
-                <img src="https://via.placeholder.com/150x50/AAAAAA/666666?text=Realização+TOCANTINS" alt="Realização Tocantins">
+                <img src="/images/gov-to.svg" alt="Realização Tocantins">
             </div>
             <div class="footer-links">
                 <a href="#">Página Inicial</a>
@@ -488,7 +488,7 @@
             </div>
         </div>
         <div class="footer-bottom">
-            &copy; 2025 Agrotins - Todos os direitos reservados <!-- Updated Year -->
+            &copy; 2025 Agrotins - Todos os direitos reservados
         </div>
     </footer>
 
@@ -594,6 +594,24 @@
 
 
 
+        // --- Countdown Timer ---
+        function updateCountdown() {
+            // Target date: 13 May 2025 00:00:00 (local time)
+            const targetDate = new Date(2025, 4, 13, 0, 0, 0); // Month is 0-indexed (4=May)
+            const now = new Date();
+            let diff = targetDate - now;
+            if (diff < 0) diff = 0;
+            const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+            const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+            const minutes = Math.floor((diff / (1000 * 60)) % 60);
+            const seconds = Math.floor((diff / 1000) % 60);
+            document.getElementById('days').childNodes[0].nodeValue = String(days).padStart(2, '0');
+            document.getElementById('hours').childNodes[0].nodeValue = String(hours).padStart(2, '0');
+            document.getElementById('minutes').childNodes[0].nodeValue = String(minutes).padStart(2, '0');
+            document.getElementById('seconds').childNodes[0].nodeValue = String(seconds).padStart(2, '0');
+        }
+        updateCountdown();
+        setInterval(updateCountdown, 1000);
         });
     </script>
      <!-- Font Awesome CDN (Optional, for icons) -->
