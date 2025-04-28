@@ -413,7 +413,6 @@
                 </div>
                 <!-- Testimonial 2 -->
                  <div class="testimonial">
-                   
                     <div class="author">
                         <span class="author-name">Jefté Elísier</span>
                         <span class="author-title">Gerente de vendas</span>
@@ -425,7 +424,6 @@
                 </div> 
                 <!-- Testimonial 3 -->
                 <div class="testimonial">
-                   
                     <div class="author">
                         <span class="author-name">Jefté Elísier</span>
                         <span class="author-title">Gerente de vendas</span>
@@ -434,10 +432,8 @@
                     <p><span class="quote-open">“</span>É o 24º ano que a gente está presente. Sempre tem uma expectativa de o movimento aumentar e não é diferente. Esse ano a feira está bem maior, muito mais expositores, tem um fluxo bem grande. Então, no momento, a gente tem um colume considerável de vendas como outras datas, de natal. A Agrotins sempre é um momento que a gente espera para ter um volume considerável de picapes</p>
                     <div class="stars">★★★★★</div>
                     <span class="quote-close">”</span>
-                </div> 
-
+                </div>
             </div>
-
         </div>
     </section>
      <!-- Services Section -->
@@ -543,16 +539,42 @@
                  updateScheduleDay(0);
             }
 
+            // --- Testimonial Carousel (Show 2 at a time) ---
+            const testimonials = document.querySelectorAll('.testimonials-grid .testimonial');
+            const testimonialPrevBtn = document.querySelector('.testimonials .prev-btn');
+            const testimonialNextBtn = document.querySelector('.testimonials .next-btn');
+            let testimonialIndex = 0;
+
+            function updateTestimonials(index) {
+                testimonials.forEach((testimonial, i) => {
+                    testimonial.style.display = (i >= index && i < index + 2) ? 'block' : 'none';
+                });
+                testimonialIndex = index;
+            }
+
+            if (testimonials.length > 0 && testimonialPrevBtn && testimonialNextBtn) {
+                testimonialNextBtn.addEventListener('click', function() {
+                    let newIndex = testimonialIndex + 2;
+                    if (newIndex >= testimonials.length) newIndex = 0;
+                    updateTestimonials(newIndex);
+                });
+                testimonialPrevBtn.addEventListener('click', function() {
+                    let newIndex = testimonialIndex - 2;
+                    if (newIndex < 0) newIndex = testimonials.length - (testimonials.length % 2 === 0 ? 2 : 1);
+                    updateTestimonials(newIndex);
+                });
+                updateTestimonials(0);
+            }
+
             // --- Add JS for Testimonial Carousel Here ---
             // Example: Select dots, add click listeners to change testimonial slides
              const testimonialDots = document.querySelectorAll('.testimonial-pagination span');
-             const testimonials = document.querySelectorAll('.testimonial'); // Assuming direct children of grid
+             // const testimonials = document.querySelectorAll('.testimonial'); // Already defined above
 
              if (testimonialDots.length > 0 && testimonials.length > 0) {
                  let currentTestimonialIndex = 0;
 
-                 function updateTestimonials(index) {
-                     // This example just updates dots, actual slide change needed
+                 function updateTestimonialsDots(index) {
                      testimonialDots.forEach((dot, i) => {
                           dot.classList.toggle('active', i === index);
                      });
@@ -563,11 +585,11 @@
 
                  testimonialDots.forEach((dot, index) => {
                      dot.addEventListener('click', () => {
-                         updateTestimonials(index);
+                         updateTestimonialsDots(index);
                      });
                  });
                   // Initial state
-                 updateTestimonials(0);
+                 updateTestimonialsDots(0);
              }
 
 

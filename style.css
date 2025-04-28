@@ -945,6 +945,25 @@ span.nav-btn.btn-blue {
     color: var(--color-text); /* Dark arrow on yellow */
 }
 
+.testimonials-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    justify-content: center;
+}
+.testimonial {
+    width: 45%;
+    min-width: 300px;
+    margin-bottom: 20px;
+    display: none; /* Hide by default, JS will show the right ones */
+}
+@media (max-width: 900px) {
+    .testimonial {
+        width: 100%;
+        min-width: unset;
+    }
+}
+
 .testimonial {
    background-color: var(--color-yellow); /* Yellow background inside */
    padding: 35px 25px 25px 45px; /* Adjust padding: top, right, bottom, left */
@@ -953,11 +972,6 @@ span.nav-btn.btn-blue {
    box-shadow: 0 4px 10px var(--color-shadow);
    position: relative;
    color: var(--color-bg-dark); /* Darker text */
-}
-.testimonials-grid {
-   display: grid;
-   grid-template-columns: repeat(auto-fit, minmax(400px, 1fr)); /* Responsive grid */
-   gap: 5rem; /* Space between testimonials */
 }
 .testimonial .quote-open {
    position: relative;
