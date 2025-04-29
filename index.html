@@ -24,8 +24,14 @@
                 <a href="#exhibitors">Expositores e Patrocinadores</a>
                 <a href="#news">Notícias</a>
                 <a href="#gallery">Galeria</a>
+                <a href="#contato" class="contact-btn mobile-only">Contato</a>
             </div>
-            <a href="#" class="contact-btn">Contato</a>
+            <a href="#contato" class="contact-btn desktop-only">Contato</a>
+            <div class="hamburger" id="hamburger-menu">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
         </nav>
     </header>
     <div class="bg-all">
@@ -34,8 +40,8 @@
         <div class="hero-content">
             <div class="stripe-box">
             <div class="hero-text">
-                <img src="/images/AGROEVOLUTION.png" alt="AGROTINS 25 anos">
-                <img src="/images/ANOS25.png" alt="AGROTINS 25 anos">
+                <img src="/images/AGROEVOLUTION.png" alt="AGROTINS 25 anos" class="agroevolution-img">
+                <img src="/images/ANOS25.png" alt="AGROTINS 25 anos" class="anos25-img">
             </div>
         </div>
             <div class="hero-logo">
@@ -84,8 +90,7 @@
         <div class="container">
              <h2 class="section-title">
                 PROGRAMAÇÃO
-                <div class="nav-arrows" style="position:absolute;top:20px;right:90px;">
-                    <!-- Add JS event listeners to these -->
+                <div class="nav-arrows" style="position:static;display:inline-flex;vertical-align:middle;">
                     <span class="nav-btn prev-btn btn-blue">«</span>
                     <span class="nav-btn next-btn btn-blue">»</span>
                 </div>
@@ -336,12 +341,11 @@
     </section>
 
     <!-- Videos Section -->
-    <section class="section bg-dark-blue videos">
+    <section class="section bg-dark-blue videos" id="videos">
         <div class="container">
              <h2 class="section-title">VÍDEOS</h2>
-             
              <p class="subtitle">
-                 CONFIRA O QUE JÁ ROLOU NA AGROTINS 2025             
+                 CONFIRA O QUE JÁ ROLOU NA AGROTINS 2025
                  <div class="section-more-link">
                     <div class="video-nav">
                         <span class="arrow-nav prev-video" id="video-arrow-prev">«</span>
@@ -349,41 +353,38 @@
                     </div>
                  </div>
              </p>
-             
-            <div class="video-carousel-wrapper">
-                <div class="video-carousel-container">
-                    <div class="video-carousel-track">
-                        <!-- Video Items -->
-                        <div class="video-item" data-url="https://www.youtube.com/watch?v=88bdcYDCVd0">
-                            <a href="https://www.youtube.com/watch?v=88bdcYDCVd0">
-                                <img src="/images/AGROTINS2.png" alt="Play Video" />
-                                <div class="play-overlay"></div>
-                            </a>
-                        </div>
-                        <div class="video-item" data-url="https://www.youtube.com/watch?v=R7W2PuLxwmo">
-                            <a href="https://www.youtube.com/watch?v=R7W2PuLxwmo">
-                                <img src="/images/AGROTINS.png" alt="Play Video" />
-                                <div class="play-overlay"></div>
-                            </a>
-                        </div>
-                        <div class="video-item" data-url="https://www.youtube.com/watch?v=dwMDSrt_-4k&t=555s">
-                            <a href="https://www.youtube.com/watch?v=dwMDSrt_-4k&t=555s">
-                                <img src="/images/agrotins3.png" alt="Play Video" />
-                                <div class="play-overlay"></div>
-                            </a>
-                        </div>
-                        <div class="video-item" data-url="https://www.youtube.com/watch?v=xGQpE8xKsUc">
-                            <a href="https://www.youtube.com/watch?v=xGQpE8xKsUc">
-                                <img src="/images/agrotins3.png" alt="Play Video" />
-                                <div class="play-overlay"></div>
-                            </a>
-                        </div>
-                        <div class="video-item" data-url="https://www.youtube.com/watch?v=0zutyYWWRHA">
-                            <a href="https://www.youtube.com/watch?v=0zutyYWWRHA">
-                                <img src="/images/AGROTINS2.png" alt="Play Video" />
-                                <div class="play-overlay"></div>
-                            </a>
-                        </div>
+             <div class="video-carousel-container">
+                <div class="video-carousel-track">
+                    <!-- Video Items -->
+                    <div class="video-item" data-url="https://www.youtube.com/watch?v=88bdcYDCVd0">
+                        <a href="https://www.youtube.com/watch?v=88bdcYDCVd0">
+                            <img src="/images/AGROTINS2.png" alt="Play Video" />
+                            <div class="play-overlay"></div>
+                        </a>
+                    </div>
+                    <div class="video-item" data-url="https://www.youtube.com/watch?v=R7W2PuLxwmo">
+                        <a href="https://www.youtube.com/watch?v=R7W2PuLxwmo">
+                            <img src="/images/AGROTINS.png" alt="Play Video" />
+                            <div class="play-overlay"></div>
+                        </a>
+                    </div>
+                    <div class="video-item" data-url="https://www.youtube.com/watch?v=dwMDSrt_-4k&t=555s">
+                        <a href="https://www.youtube.com/watch?v=dwMDSrt_-4k&t=555s">
+                            <img src="/images/agrotins3.png" alt="Play Video" />
+                            <div class="play-overlay"></div>
+                        </a>
+                    </div>
+                    <div class="video-item" data-url="https://www.youtube.com/watch?v=xGQpE8xKsUc">
+                        <a href="https://www.youtube.com/watch?v=xGQpE8xKsUc">
+                            <img src="/images/agrotins3.png" alt="Play Video" />
+                            <div class="play-overlay"></div>
+                        </a>
+                    </div>
+                    <div class="video-item" data-url="https://www.youtube.com/watch?v=0zutyYWWRHA">
+                        <a href="https://www.youtube.com/watch?v=0zutyYWWRHA">
+                            <img src="/images/AGROTINS2.png" alt="Play Video" />
+                            <div class="play-overlay"></div>
+                        </a>
                     </div>
                 </div>
             </div>

@@ -347,16 +347,19 @@ header {
     text-align: left;
     position: relative;
     display: flex; /* For aligning arrows */
-    justify-content: space-between;
+    justify-content: flex-start;
     align-items: center;
+    gap: 16px;
 }
 .section.bg-yellow .section-title {
     color: var(--color-text); /* Dark title on yellow */
 }
 
 .section-title .nav-arrows { /* Container for arrows */
-     display: flex;
-     gap: 10px;
+     display: inline-flex;
+     vertical-align: middle;
+     margin-left: 12px;
+     gap: 8px;
 }
  .section-title .nav-arrows span,
  .section-more-link .arrow-nav { /* Style for >> arrows */
@@ -382,18 +385,7 @@ header {
 
 /* Custom for nav-btn in top right */
 .section-title .nav-arrows {
-    position: absolute;
-    right: 40px;
-    display: flex;
-    gap: 10px;
-    z-index: 10;
-}
-
-.section-title {
-    position: relative;
-    margin-bottom: 20px;
-    font-weight: 800;
-    font-size: 2rem;
+    position: static !important;
 }
 
 /* Testimonial custom divider */
@@ -1258,4 +1250,92 @@ footer {
     .footer-container { flex-direction: column; text-align: center; }
     .photos-grid { grid-template-columns: repeat(auto-fit, minmax(120px, 1fr)); }
     .photo-item img { height: 100px; }
+}
+
+/* Hide/show contato button and hamburger based on device */
+.desktop-only { display: inline-block; }
+.mobile-only { display: none !important; }
+@media (max-width: 900px) {
+  .desktop-only { display: none !important; }
+  .mobile-only { display: inline-block !important; }
+  .hamburger { display: flex; }
+}
+
+/* Hamburger menu overlay for nav-links */
+@media (max-width: 900px) {
+  .nav-links {
+    position: absolute;
+    top: 70px;
+    left: 0;
+    width: 100vw;
+    background: var(--color-bg-dark);
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 20px 0 10px 30px;
+    gap: 10px;
+    display: none;
+    box-shadow: 0 4px 24px #0004;
+    z-index: 1000;
+  }
+  .nav-links.open {
+    display: flex;
+  }
+}
+
+/* Agroevolution & Anos25 stacked, centered on mobile */
+@media (max-width: 900px) {
+  .hero-text {
+    flex-direction: column !important;
+    align-items: center !important;
+    gap: 10px !important;
+  }
+  .agroevolution-img,
+  .anos25-img {
+    display: block;
+    margin: 0 auto;
+    max-width: 80vw;
+    width: 90%;
+  }
+}
+
+/* Schedule nav-arrows not overlapping title */
+.section-title {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 16px;
+  position: relative;
+}
+.section-title .nav-arrows {
+  position: static !important;
+  margin-left: 12px;
+  gap: 8px;
+  display: inline-flex;
+  vertical-align: middle;
+}
+
+/* Video carousel: show only 1 video in mobile */
+@media (max-width: 900px) {
+  .video-carousel-track {
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: auto;
+  }
+  .video-item {
+    flex: 0 0 100%;
+    max-width: 100vw;
+    margin: 0;
+    display: none;
+  }
+  .video-item.center {
+    display: block !important;
+    transform: none !important;
+    filter: none !important;
+    box-shadow: 0 8px 32px 0 rgba(0,0,0,0.13);
+  }
+  .video-item.left,
+  .video-item.right {
+    display: none !important;
+  }
 }
