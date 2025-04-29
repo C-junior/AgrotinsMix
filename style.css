@@ -116,7 +116,7 @@ header {
     height: 4px;
     width: 100%;
     background: var(--color-primary);
-    margin: 5px 0;
+    margin: 4px 0;
     border-radius: 2px;
     transition: 0.3s;
 }
@@ -172,7 +172,7 @@ header {
 
 /* Hero Section */
 .bg-all {
-    background-image: url('/images/BACKGROUND.PNG');
+    background-image: url('/images/background-hero.png');
     background-size: cover;
     background-position: center;
 }
