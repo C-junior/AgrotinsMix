@@ -42,7 +42,7 @@ a {
 header {
     background-color: var(--color-white);
     box-shadow: 0 2px 4px var(--color-shadow);
-    padding: 10px 0;
+    padding: 20px 0;
     position: sticky;
     top: 0;
     z-index: 100;
@@ -89,7 +89,7 @@ header {
     margin-left: auto;
     background-color: var(--color-primary);
     color: var(--color-white) !important; /* Ensure white text */
-    padding: 8px 20px; /* Adjusted padding */
+    padding: 8px 20px !important; /* Adjusted padding */
     border-radius: 4px;
     font-weight: 600;
     font-size: 14px;
@@ -131,6 +131,23 @@ header {
 }
 
 @media (max-width: 900px) {
+    .navbar {
+        flex-direction: row !important;
+        justify-content: space-between !important;
+        align-items: center !important;
+        width: 100%;
+        padding: 0 12px;
+        gap: 0;
+    }
+    .logo {
+        order: 1;
+        flex: 0 0 auto;
+        margin-right: auto;
+    }
+    .hamburger {
+        order: 2;
+        margin-left: auto;
+    }
     .nav-links {
         position: absolute;
         top: 70px;
@@ -150,9 +167,6 @@ header {
     }
     .hamburger {
         display: flex;
-    }
-    .navbar {
-        position: relative;
     }
 }
 
@@ -232,7 +246,7 @@ header {
         margin-bottom: 30px;
     }
     .hero-text img {
-        max-width: 45%;
+        max-width: 80%;
     }
     .hero-logo {
         justify-content: center;
@@ -240,7 +254,7 @@ header {
         width: 100%;
     }
     .hero-logo img {
-        max-width: 200px;
+        max-width: 225px;
     }
     .stripe-box {
         min-height: 300px;
@@ -388,13 +402,6 @@ header {
     position: static !important;
 }
 
-/* Testimonial custom divider */
-.testimonial hr {
-    border: 0;
-    border-top: 1.5px solid #07294d;
-    margin: 10px 0;
-}
-
 /* Schedule Section */
 .schedule {
     padding: 60px 0;
@@ -510,10 +517,31 @@ span.nav-btn.btn-blue {
         padding-left: 10px;
         padding-right: 10px;
     }
-    .schedule-container { flex-direction: column; }
+    .schedule-container { flex-direction: column;
+    background-image: var(--color-overlay); 
+background-color: var(--color-overlay);}
     .schedule-image { display: none; }
     background-color: var(--color-overlay); /* Removed overlay color */    
 
+}
+
+/* Schedule nav-arrows: move to right side of the page */
+.schedule .section-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+  gap: 0;
+}
+.schedule .section-title .nav-arrows {
+  position: absolute !important;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  margin-left: 0;
+  gap: 8px;
+  display: flex;
+  vertical-align: middle;
 }
 
 /* Exhibitors Section */
@@ -594,7 +622,9 @@ span.nav-btn.btn-blue {
 .sponsors .container {
     position: relative; /* For arrow positioning */
 }
-.sponsors h2 { /* Uses .section-title now */ }
+.sponsors h2 { 
+    color: var(--color-primary);
+ }
 
 .sponsors-carousel {
     position: relative;
@@ -610,6 +640,8 @@ span.nav-btn.btn-blue {
     flex-wrap: nowrap;
      animation: scrollSponsors 25s linear infinite; /* Keep or remove animation */
     width: max-content; /* Important for scrolling */
+    min-height: 120px;
+    align-items: center;
 }
 
 /* Keep hover pause if using animation */
@@ -636,9 +668,19 @@ span.nav-btn.btn-blue {
 }
 
 .sponsor-logo img {
-    max-width: 100%;
-    max-height: 80px; /* Limit logo height */
+    height: 70px;
+    max-width: 120px;
     object-fit: contain;
+}
+
+@media (max-width: 900px) {
+  .sponsors-logos {
+    min-height: 80px;
+  }
+  .sponsor-logo img {
+    height: 48px;
+    max-width: 80px;
+  }
 }
 
 .sponsors-nav-arrow { /* Position arrows if needed */
@@ -649,12 +691,12 @@ span.nav-btn.btn-blue {
     font-size: 30px;
     cursor: pointer;
     z-index: 10;
-     /* Example positioning */
-     right: -15px;
+    line-height: 0;
+    justify-content: flex-end;
+    width: 100%;
 }
 /* Style left arrow if needed */
 /* .sponsors-nav-arrow.prev { left: -15px; } */
-
 
 /* News Section */
 .news-container {
@@ -863,11 +905,22 @@ span.nav-btn.btn-blue {
 }
 
 /* Optional: Arrow styling if needed specifically here */
-.photos .section-title .nav-arrows {
-   /* Hide default arrows if using the "VER MAIS" link only */
-    /* display: none; */
-}
+.photos-nav-arrows {
+   
+   font-size: 48px;
+   cursor: pointer;
+   position: absolute;
+   top: 50%;
+   transform: translateY(-50%);
+   z-index: 10;
+   line-height: 20px;
+   justify-content: flex-end;
+   width: 100%;
 
+}
+.photos-nav-arrows .photo-span{
+    color: var(--color-yellow) !important;
+}
 /* --- Videos Section Styling --- */
 .videos .section-title {
     color: var(--color-primary);
@@ -994,7 +1047,10 @@ span.nav-btn.btn-blue {
 .testimonials .section-title .arrow-nav {
     color: var(--color-text); /* Dark arrow on yellow */
 }
-
+.testimonials-nav-arrow{
+    width: 100% !important;
+    position:absolute !important;top:20px;left:90% !important;
+}
 .testimonials-grid {
     display: flex;
     flex-wrap: wrap;
@@ -1088,6 +1144,23 @@ span.nav-btn.btn-blue {
 .testimonial-pagination {
    display: none;
 }
+
+/* Testimonial: show only 1 at a time on mobile */
+@media (max-width: 900px) {
+  .testimonials-grid {
+    flex-direction: column;
+    gap: 0;
+  }
+  .testimonial {
+    width: 100% !important;
+    min-width: unset !important;
+    display: none !important;
+  }
+  .testimonial.active {
+    display: block !important;
+  }
+}
+
 /* Services Section */
 .services-container {
     display: flex;
@@ -1210,10 +1283,10 @@ footer {
         justify-content: center;
         align-items: center;
         gap: 20px;
-        margin-bottom: 30px;
+        margin-bottom: 10px;
     }
     .hero-text img {
-        max-width: 45%;
+        max-width: 85%;
     }
     .hero-logo {
         justify-content: center;
@@ -1337,5 +1410,29 @@ footer {
   .video-item.left,
   .video-item.right {
     display: none !important;
+  }
+}
+
+/* Sponsors carousel: higher container for better logo display */
+.sponsors-carousel-wrapper,
+.sponsors-carousel-container {
+  min-height: 160px !important;
+  height: 160px !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.sponsors-logo img {
+  height: 120px;
+  align-items: center;
+}
+@media (max-width: 900px) {
+  .sponsors-carousel-wrapper,
+  .sponsors-carousel-container {
+    min-height: 120px !important;
+    height: 120px !important;
+  }
+  .sponsors-logo {
+    min-height: 80px;
   }
 }
